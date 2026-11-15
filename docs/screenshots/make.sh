@@ -23,11 +23,12 @@ shot 1b-question    560 "3&top=turn"
 shot 1c-answer      560 "4&top=turn"
 
 # Storyboard 2, question 4: the two readings disagree, TurnCheck asks, then gives the no-hints reply.
-shot 2a-sent        600 "9&pending=1&top=divider"
-shot 2b-asked       600 "9&top=divider"
-shot 2c-no-hints    600 "10&top=turn"
+shot 2a-sent        600 "11&pending=1&top=divider"
+shot 2b-asked       600 "11&top=divider"
+shot 2c-no-hints    600 "12&top=turn"
 
-# Storyboard 3, question 2: a question misread as thinking aloud, corrected with one tap; then the record.
-shot 3a-misread     500 "5&top=divider"
-shot 3b-corrected   500 "6&top=turn"
-shot 3c-record      500 "12&row=2"
+# Storyboard 3, question 3: a request recorded as the answer (a miss found by the stress turns),
+# taken back with one tap after TurnCheck had moved on; then the record.
+shot 3a-misread     660 "8"
+shot 3b-corrected   660 "9&top=turn"
+shot 3c-record      660 "14&row=3"

@@ -1,5 +1,5 @@
 {
-  "about": "One whole interview, replayed through the real model. The storyboards in the report are steps of this run. The turns are scripted; how each one is read is not.",
+  "about": "One whole interview, replayed through the real model. The storyboards in the report are steps of this run. The turns are scripted; how each one is read is not. The turn at question 3 that is recorded as an answer comes from the stress turns.",
   "start_at": 1,
   "actions": [
     {"turn": "hmm okay, let me think about that for a second"},
@@ -8,6 +8,8 @@
     {"turn": "dimension as in the warehouse sense"},
     {"correct": "last", "to": "question"},
     {"turn": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row"},
+    {"turn": "I don't know how much detail you want"},
+    {"correct": "last", "to": "question"},
     {"turn": "star keeps the dimensions flat, snowflake splits them into more tables"},
     {"turn": "would ROW_NUMBER over the event id work"},
     {"choose": "question"},

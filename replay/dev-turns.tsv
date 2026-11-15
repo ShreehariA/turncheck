@@ -1,0 +1,54 @@
+# Dev turns: written by Claude (the AI assistant) while building, and used to debug.
+# They are NOT evidence that TurnCheck works. See heldout.tsv for turns the author wrote unseen.
+#
+# question number | what was meant (answer, question, thinking, unsure) | the turn | sheet entry expected (optional)
+
+# The 13 turns from the October spike, with the questions renumbered.
+1 | question | is this about dbt? I've mostly used Airflow | 1.1
+1 | answer   | I'd set materialized to incremental and filter on updated_at with is_incremental, so only new rows get processed
+1 | thinking | hmm okay, let me think about that for a second
+1 | question | sorry, what does incremental mean here | 1.2
+3 | answer   | A star schema joins one fact table straight to denormalised dimensions, a snowflake normalises the dimensions into more tables
+3 | question | sorry, could you repeat the second one | c.repeat
+3 | answer   | star is flatter, snowflake splits dimensions further, I think
+4 | question | do you mean during streaming or after the data lands in the warehouse | 4.2
+4 | answer   | I'd give every event an id and keep the first one with ROW_NUMBER over the id
+4 | unsure   | would ROW_NUMBER over the event id work
+2 | question | what do you mean by dimension here, like in a data warehouse? | 2.1
+2 | thinking | uh so, like type two
+2 | answer   | it's a dimension where attributes change over time, and type 2 keeps history by adding a new row with valid from and to dates
+
+# Added on 14 Nov to try the sheets and the fifth question.
+1 | question | can I answer this with Spark instead | c.tools
+1 | question | what is a model in dbt | 1.3
+1 | question | can you give me a hint | c.check
+2 | question | do you want type 1 or type 2 | 2.2
+2 | question | what is the salary for this role | none
+3 | question | how long should my answer be | c.length
+4 | question | are the duplicates exact copies | 4.1
+5 | question | which scheduler is it | 5.1
+5 | question | should I fix it or just find out why | 5.3
+5 | answer   | I'd open the scheduler logs for the failed task first, because the error and the step tell me where to look
+5 | thinking | okay so a failed pipeline, um
+
+# Added on 14 Nov to look for misses: questions that are not phrased as questions.
+1 | question | so this is the dbt incremental thing | 1.1
+1 | question | I haven't used dbt before | 1.1
+2 | question | dimension as in the warehouse sense | 2.1
+2 | question | I'm not sure what you mean by dimension | 2.1
+3 | question | not sure what schema means here | 3.1
+
+# Added on 14 Nov after a hint leak: questions that check the candidate's own idea must get the no-hints reply.
+4 | question | would a group by on the event id do it | c.check
+4 | question | can I just use distinct | c.check
+1 | question | is it okay if I filter on a timestamp column | c.check
+1 | question | could I do it with a where clause on the load date | c.check
+2 | question | am I on the right track with type 2 | c.check
+2 | question | should I mention surrogate keys | c.check
+2 | question | is that the thing where you add a new row for each change | c.check
+3 | question | would it be enough to say snowflake is more normalised | c.check
+5 | question | is checking the logs first the right thing to do | c.check
+4 | question | is a duplicate identical to the first one | 4.1
+4 | question | which warehouse is this on | 4.3
+5 | question | can I have a minute | c.time
+1 | answer   | so I'd use a merge statement, does that sound right

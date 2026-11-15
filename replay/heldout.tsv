@@ -1,0 +1,18 @@
+# Held-out test turns: written by the author, not by the AI assistant, and not shown to it
+# until the prompt and the wording rule were frozen (git tag frozen-v1).
+#
+# One turn per line:    question number | what you meant | the turn, as you would say it
+#
+#   question number   1 to 5, as in interview/data-engineer.json
+#   what you meant    answer     you are answering the question
+#                     question   you are asking the interviewer something
+#                     thinking   you are thinking aloud and have not finished
+#                     unsure     honestly ambiguous, even to you: TurnCheck should ask
+#   For a question you may add a fourth part: the sheet entry it should get, or none.
+#
+# Example (this line starts with # so it is ignored):
+# 3 | question | wait, is snowflake the one with more joins | none
+#
+# Write them the way you would really say them in an interview: half sentences, fillers,
+# questions that do not sound like questions. Question marks are removed before reading.
+# About 30 turns is enough: roughly 10 answers, 10 questions, 5 thinking and 5 unsure.

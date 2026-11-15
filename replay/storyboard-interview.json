@@ -1,0 +1,17 @@
+{
+  "about": "One whole interview, replayed through the real model. The storyboards in the report are steps of this run. The turns are scripted; how each one is read is not.",
+  "start_at": 1,
+  "actions": [
+    {"turn": "hmm okay, let me think about that for a second"},
+    {"turn": "is this about dbt? I've mostly used Airflow"},
+    {"turn": "I'd filter on updated_at so each run only adds rows newer than the last load"},
+    {"turn": "dimension as in the warehouse sense"},
+    {"correct": "last", "to": "question"},
+    {"turn": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row"},
+    {"turn": "star keeps the dimensions flat, snowflake splits them into more tables"},
+    {"turn": "would ROW_NUMBER over the event id work"},
+    {"choose": "question"},
+    {"turn": "I'd keep the first row per event id with ROW_NUMBER and drop the rest"},
+    {"turn": "I'd open the scheduler logs for the failed task first, because the error tells me which step broke"}
+  ]
+}

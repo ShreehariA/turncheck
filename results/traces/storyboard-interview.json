@@ -1,0 +1,1853 @@
+{
+ "name": "storyboard-interview",
+ "about": "One whole interview, replayed through the real model. The storyboards in the report are steps of this run. The turns are scripted; how each one is read is not.",
+ "script": "data-engineer.json",
+ "model": "qwen2.5:7b",
+ "start_at": 1,
+ "made": "2026-11-14",
+ "steps": [
+  {
+   "action": {
+    "open": true
+   },
+   "trace": [],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "start",
+    "progress": "",
+    "question": "",
+    "indicator": "",
+    "banner": "",
+    "items": [],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "start": true
+   },
+   "trace": [],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 1 of 5",
+    "question": "How would you make a dbt model incremental, so that it only processes new rows?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "turn": "hmm okay, let me think about that for a second"
+   },
+   "trace": [
+    {
+     "n": 1,
+     "action": {
+      "turn": "hmm okay, let me think about that for a second"
+     },
+     "question": 1,
+     "calls": [
+      {
+       "purpose": "label",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: hmm okay, let me think about that for a second"
+        }
+       ],
+       "raw": "{\"label\": \"unfinished\"}",
+       "label": "unfinished",
+       "p": 1.0,
+       "ms": 487,
+       "error": null
+      }
+     ],
+     "wording_says_question": false,
+     "edge": "unfinished",
+     "did": "wait"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 1 of 5",
+    "question": "How would you make a dbt model incremental, so that it only processes new rows?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded",
+      "fix": [
+       {
+        "to": "question",
+        "label": "That was a question"
+       },
+       {
+        "to": "answer",
+        "label": "That was my answer"
+       }
+      ]
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "turn": "is this about dbt? I've mostly used Airflow"
+   },
+   "trace": [
+    {
+     "n": 2,
+     "action": {
+      "turn": "is this about dbt I've mostly used Airflow"
+     },
+     "question": 1,
+     "calls": [
+      {
+       "purpose": "label",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: is this about dbt I've mostly used Airflow"
+        }
+       ],
+       "raw": "{\"label\": \"question\"}",
+       "label": "question",
+       "p": 0.856,
+       "ms": 364,
+       "error": null
+      },
+      {
+       "purpose": "entry",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nPrepared replies:\n- 1.1: use when the candidate asks what dbt is, or whether the question is about dbt, or says they have not used dbt\n- 1.2: use when the candidate asks what incremental means here\n- 1.3: use when the candidate asks what a model is in dbt\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: is this about dbt I've mostly used Airflow"
+        }
+       ],
+       "raw": "{\"entry\": \"1.1\"}",
+       "entry": "1.1",
+       "p": null,
+       "ms": 405,
+       "error": null
+      }
+     ],
+     "wording_says_question": true,
+     "edge": "agree-question",
+     "did": "clarify"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 1 of 5",
+    "question": "How would you make a dbt model incremental, so that it only processes new rows?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded",
+      "fix": [
+       {
+        "to": "answer",
+        "label": "That was my answer"
+       }
+      ]
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "turn": "I'd filter on updated_at so each run only adds rows newer than the last load"
+   },
+   "trace": [
+    {
+     "n": 3,
+     "action": {
+      "turn": "I'd filter on updated_at so each run only adds rows newer than the last load"
+     },
+     "question": 1,
+     "calls": [
+      {
+       "purpose": "label",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: I'd filter on updated_at so each run only adds rows newer than the last load"
+        }
+       ],
+       "raw": "{\"label\": \"answer\"}",
+       "label": "answer",
+       "p": 1.0,
+       "ms": 391,
+       "error": null
+      }
+     ],
+     "wording_says_question": false,
+     "edge": "agree-answer",
+     "did": "record"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 2 of 5",
+    "question": "What is a slowly changing dimension, and how would you keep its history?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 4,
+      "q": 1,
+      "text": "I'd filter on updated_at so each run only adds rows newer than the last load",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded",
+      "fix": [
+       {
+        "to": "question",
+        "label": "That was a question"
+       }
+      ]
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is a slowly changing dimension, and how would you keep its history?",
+      "n": 2,
+      "of": 5
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "turn": "dimension as in the warehouse sense"
+   },
+   "trace": [
+    {
+     "n": 4,
+     "action": {
+      "turn": "dimension as in the warehouse sense"
+     },
+     "question": 2,
+     "calls": [
+      {
+       "purpose": "label",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nCandidate's turn: dimension as in the warehouse sense"
+        }
+       ],
+       "raw": "{\"label\": \"unfinished\"}",
+       "label": "unfinished",
+       "p": 0.964,
+       "ms": 383,
+       "error": null
+      }
+     ],
+     "wording_says_question": false,
+     "edge": "unfinished",
+     "did": "wait"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 2 of 5",
+    "question": "What is a slowly changing dimension, and how would you keep its history?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 4,
+      "q": 1,
+      "text": "I'd filter on updated_at so each run only adds rows newer than the last load",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is a slowly changing dimension, and how would you keep its history?",
+      "n": 2,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 7,
+      "q": 2,
+      "text": "dimension as in the warehouse sense",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded",
+      "fix": [
+       {
+        "to": "question",
+        "label": "That was a question"
+       },
+       {
+        "to": "answer",
+        "label": "That was my answer"
+       }
+      ]
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "correct": "last",
+    "to": "question"
+   },
+   "trace": [
+    {
+     "n": 5,
+     "action": {
+      "correct": 7,
+      "to": "question"
+     },
+     "question": 2,
+     "calls": [
+      {
+       "purpose": "entry",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nPrepared replies:\n- 2.1: use when the candidate asks what a dimension is, or what dimension means here\n- 2.2: use when the candidate asks whether a particular type is meant, such as type 1 or type 2\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: dimension as in the warehouse sense"
+        }
+       ],
+       "raw": "{\"entry\": \"2.1\"}",
+       "entry": "2.1",
+       "p": null,
+       "ms": 440,
+       "error": null
+      }
+     ],
+     "wording_says_question": null,
+     "edge": "corrected-unfinished-to-question",
+     "did": "clarify"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 2 of 5",
+    "question": "What is a slowly changing dimension, and how would you keep its history?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 4,
+      "q": 1,
+      "text": "I'd filter on updated_at so each run only adds rows newer than the last load",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is a slowly changing dimension, and how would you keep its history?",
+      "n": 2,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 7,
+      "q": 2,
+      "text": "dimension as in the warehouse sense",
+      "why": "model: thinking · wording: not a question",
+      "read": "question",
+      "chip": "You corrected: question · not recorded",
+      "corrected": true
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "A dimension is a table that describes things in a data warehouse, such as customers or products.",
+      "tag": "sheet entry 2.1 · same for everyone who asks"
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "turn": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row"
+   },
+   "trace": [
+    {
+     "n": 6,
+     "action": {
+      "turn": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row"
+     },
+     "question": 2,
+     "calls": [
+      {
+       "purpose": "label",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nCandidate's turn: it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row"
+        }
+       ],
+       "raw": "{\"label\": \"answer\"}",
+       "label": "answer",
+       "p": 1.0,
+       "ms": 380,
+       "error": null
+      }
+     ],
+     "wording_says_question": false,
+     "edge": "agree-answer",
+     "did": "record"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 3 of 5",
+    "question": "What is the difference between a star schema and a snowflake schema?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 4,
+      "q": 1,
+      "text": "I'd filter on updated_at so each run only adds rows newer than the last load",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is a slowly changing dimension, and how would you keep its history?",
+      "n": 2,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 7,
+      "q": 2,
+      "text": "dimension as in the warehouse sense",
+      "why": "model: thinking · wording: not a question",
+      "read": "question",
+      "chip": "You corrected: question · not recorded",
+      "corrected": true
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "A dimension is a table that describes things in a data warehouse, such as customers or products.",
+      "tag": "sheet entry 2.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 9,
+      "q": 2,
+      "text": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded",
+      "fix": [
+       {
+        "to": "question",
+        "label": "That was a question"
+       }
+      ]
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is the difference between a star schema and a snowflake schema?",
+      "n": 3,
+      "of": 5
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "turn": "star keeps the dimensions flat, snowflake splits them into more tables"
+   },
+   "trace": [
+    {
+     "n": 7,
+     "action": {
+      "turn": "star keeps the dimensions flat, snowflake splits them into more tables"
+     },
+     "question": 3,
+     "calls": [
+      {
+       "purpose": "label",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: What is the difference between a star schema and a snowflake schema?\nCandidate's turn: star keeps the dimensions flat, snowflake splits them into more tables"
+        }
+       ],
+       "raw": "{\"label\": \"answer\"}",
+       "label": "answer",
+       "p": 1.0,
+       "ms": 459,
+       "error": null
+      }
+     ],
+     "wording_says_question": false,
+     "edge": "agree-answer",
+     "did": "record"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 4 of 5",
+    "question": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 4,
+      "q": 1,
+      "text": "I'd filter on updated_at so each run only adds rows newer than the last load",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is a slowly changing dimension, and how would you keep its history?",
+      "n": 2,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 7,
+      "q": 2,
+      "text": "dimension as in the warehouse sense",
+      "why": "model: thinking · wording: not a question",
+      "read": "question",
+      "chip": "You corrected: question · not recorded",
+      "corrected": true
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "A dimension is a table that describes things in a data warehouse, such as customers or products.",
+      "tag": "sheet entry 2.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 9,
+      "q": 2,
+      "text": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is the difference between a star schema and a snowflake schema?",
+      "n": 3,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 12,
+      "q": 3,
+      "text": "star keeps the dimensions flat, snowflake splits them into more tables",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded",
+      "fix": [
+       {
+        "to": "question",
+        "label": "That was a question"
+       }
+      ]
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+      "n": 4,
+      "of": 5
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "turn": "would ROW_NUMBER over the event id work"
+   },
+   "trace": [
+    {
+     "n": 8,
+     "action": {
+      "turn": "would ROW_NUMBER over the event id work"
+     },
+     "question": 4,
+     "calls": [
+      {
+       "purpose": "label",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: Events sometimes arrive twice from a stream. How would you remove the duplicates?\nCandidate's turn: would ROW_NUMBER over the event id work"
+        }
+       ],
+       "raw": "{\"label\": \"answer\"}",
+       "label": "answer",
+       "p": 1.0,
+       "ms": 434,
+       "error": null
+      }
+     ],
+     "wording_says_question": true,
+     "edge": "disagree",
+     "did": "ask"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "asking",
+    "progress": "Question 4 of 5",
+    "question": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+    "indicator": "asked you: choose below",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 4,
+      "q": 1,
+      "text": "I'd filter on updated_at so each run only adds rows newer than the last load",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is a slowly changing dimension, and how would you keep its history?",
+      "n": 2,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 7,
+      "q": 2,
+      "text": "dimension as in the warehouse sense",
+      "why": "model: thinking · wording: not a question",
+      "read": "question",
+      "chip": "You corrected: question · not recorded",
+      "corrected": true
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "A dimension is a table that describes things in a data warehouse, such as customers or products.",
+      "tag": "sheet entry 2.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 9,
+      "q": 2,
+      "text": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is the difference between a star schema and a snowflake schema?",
+      "n": 3,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 12,
+      "q": 3,
+      "text": "star keeps the dimensions flat, snowflake splits them into more tables",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+      "n": 4,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 15,
+      "q": 4,
+      "text": "would ROW_NUMBER over the event id work",
+      "why": "model: answer · wording: question",
+      "read": null,
+      "chip": "Not sure how to read this · asked you"
+     },
+     {
+      "who": "interviewer",
+      "kind": "ask",
+      "text": "Was that your answer, or a question for me?"
+     }
+    ],
+    "buttons": [
+     {
+      "id": "answer",
+      "label": "My answer"
+     },
+     {
+      "id": "question",
+      "label": "A question"
+     },
+     {
+      "id": "thinking",
+      "label": "Still thinking"
+     }
+    ],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "choose": "question"
+   },
+   "trace": [
+    {
+     "n": 9,
+     "action": {
+      "choose": "question"
+     },
+     "question": 4,
+     "calls": [
+      {
+       "purpose": "entry",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: Events sometimes arrive twice from a stream. How would you remove the duplicates?\nPrepared replies:\n- 4.1: use when the candidate asks whether a duplicate event is an exact copy of the original\n- 4.2: use when the candidate asks whether this is during streaming or after the data is loaded\n- 4.3: use when the candidate asks which system, warehouse or streaming tool is used\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: would ROW_NUMBER over the event id work"
+        }
+       ],
+       "raw": "{\"entry\": \"c.check\"}",
+       "entry": "c.check",
+       "p": null,
+       "ms": 544,
+       "error": null
+      }
+     ],
+     "wording_says_question": null,
+     "edge": "chose-question",
+     "did": "decline"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 4 of 5",
+    "question": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 4,
+      "q": 1,
+      "text": "I'd filter on updated_at so each run only adds rows newer than the last load",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is a slowly changing dimension, and how would you keep its history?",
+      "n": 2,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 7,
+      "q": 2,
+      "text": "dimension as in the warehouse sense",
+      "why": "model: thinking · wording: not a question",
+      "read": "question",
+      "chip": "You corrected: question · not recorded",
+      "corrected": true
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "A dimension is a table that describes things in a data warehouse, such as customers or products.",
+      "tag": "sheet entry 2.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 9,
+      "q": 2,
+      "text": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is the difference between a star schema and a snowflake schema?",
+      "n": 3,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 12,
+      "q": 3,
+      "text": "star keeps the dimensions flat, snowflake splits them into more tables",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+      "n": 4,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 15,
+      "q": 4,
+      "text": "would ROW_NUMBER over the event id work",
+      "why": "model: answer · wording: question",
+      "read": "question",
+      "chip": "You said: question · not recorded",
+      "fix": [
+       {
+        "to": "answer",
+        "label": "That was my answer"
+       }
+      ]
+     },
+     {
+      "who": "interviewer",
+      "kind": "ask",
+      "text": "Was that your answer, or a question for me?"
+     },
+     {
+      "who": "interviewer",
+      "kind": "decline",
+      "text": "I can't say whether an approach is right, and I can't give hints. A person judges the answers. Tell me what you would do, and why.",
+      "tag": "sheet entry c.check · same for everyone who asks"
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "turn": "I'd keep the first row per event id with ROW_NUMBER and drop the rest"
+   },
+   "trace": [
+    {
+     "n": 10,
+     "action": {
+      "turn": "I'd keep the first row per event id with ROW_NUMBER and drop the rest"
+     },
+     "question": 4,
+     "calls": [
+      {
+       "purpose": "label",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: Events sometimes arrive twice from a stream. How would you remove the duplicates?\nCandidate's turn: I'd keep the first row per event id with ROW_NUMBER and drop the rest"
+        }
+       ],
+       "raw": "{\"label\": \"answer\"}",
+       "label": "answer",
+       "p": 1.0,
+       "ms": 478,
+       "error": null
+      }
+     ],
+     "wording_says_question": false,
+     "edge": "agree-answer",
+     "did": "record"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "listening",
+    "progress": "Question 5 of 5",
+    "question": "A daily pipeline failed overnight. What do you check first, and why?",
+    "indicator": "waiting for you",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 4,
+      "q": 1,
+      "text": "I'd filter on updated_at so each run only adds rows newer than the last load",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is a slowly changing dimension, and how would you keep its history?",
+      "n": 2,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 7,
+      "q": 2,
+      "text": "dimension as in the warehouse sense",
+      "why": "model: thinking · wording: not a question",
+      "read": "question",
+      "chip": "You corrected: question · not recorded",
+      "corrected": true
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "A dimension is a table that describes things in a data warehouse, such as customers or products.",
+      "tag": "sheet entry 2.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 9,
+      "q": 2,
+      "text": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is the difference between a star schema and a snowflake schema?",
+      "n": 3,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 12,
+      "q": 3,
+      "text": "star keeps the dimensions flat, snowflake splits them into more tables",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+      "n": 4,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 15,
+      "q": 4,
+      "text": "would ROW_NUMBER over the event id work",
+      "why": "model: answer · wording: question",
+      "read": "question",
+      "chip": "You said: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "ask",
+      "text": "Was that your answer, or a question for me?"
+     },
+     {
+      "who": "interviewer",
+      "kind": "decline",
+      "text": "I can't say whether an approach is right, and I can't give hints. A person judges the answers. Tell me what you would do, and why.",
+      "tag": "sheet entry c.check · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 18,
+      "q": 4,
+      "text": "I'd keep the first row per event id with ROW_NUMBER and drop the rest",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded",
+      "fix": [
+       {
+        "to": "question",
+        "label": "That was a question"
+       }
+      ]
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "A daily pipeline failed overnight. What do you check first, and why?",
+      "n": 5,
+      "of": 5
+     }
+    ],
+    "buttons": [],
+    "record": null
+   }
+  },
+  {
+   "action": {
+    "turn": "I'd open the scheduler logs for the failed task first, because the error tells me which step broke"
+   },
+   "trace": [
+    {
+     "n": 11,
+     "action": {
+      "turn": "I'd open the scheduler logs for the failed task first, because the error tells me which step broke"
+     },
+     "question": 5,
+     "calls": [
+      {
+       "purpose": "label",
+       "model": "qwen2.5:7b",
+       "sent": [
+        {
+         "role": "system",
+         "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+        },
+        {
+         "role": "user",
+         "content": "Interviewer's question: A daily pipeline failed overnight. What do you check first, and why?\nCandidate's turn: I'd open the scheduler logs for the failed task first, because the error tells me which step broke"
+        }
+       ],
+       "raw": "{\"label\": \"answer\"}",
+       "label": "answer",
+       "p": 1.0,
+       "ms": 507,
+       "error": null
+      }
+     ],
+     "wording_says_question": false,
+     "edge": "agree-answer",
+     "did": "record"
+    }
+   ],
+   "view": {
+    "title": "Practice interview: junior data engineer",
+    "intro": [
+     "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+     "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+     "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+     "I can misread a turn. When I'm not sure, I ask you.",
+     "I don't score anything. A person reads the record, and you see it at the end."
+    ],
+    "state": "done",
+    "progress": "",
+    "question": "",
+    "indicator": "finished",
+    "banner": "",
+    "items": [
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "n": 1,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 1,
+      "q": 1,
+      "text": "hmm okay, let me think about that for a second",
+      "why": "model: thinking · wording: not a question",
+      "read": "unfinished",
+      "chip": "Read as: thinking · not recorded"
+     },
+     {
+      "who": "candidate",
+      "id": 2,
+      "q": 1,
+      "text": "is this about dbt I've mostly used Airflow",
+      "why": "model: question · wording: question",
+      "read": "question",
+      "chip": "Read as: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know.",
+      "tag": "sheet entry 1.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 4,
+      "q": 1,
+      "text": "I'd filter on updated_at so each run only adds rows newer than the last load",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is a slowly changing dimension, and how would you keep its history?",
+      "n": 2,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 7,
+      "q": 2,
+      "text": "dimension as in the warehouse sense",
+      "why": "model: thinking · wording: not a question",
+      "read": "question",
+      "chip": "You corrected: question · not recorded",
+      "corrected": true
+     },
+     {
+      "who": "interviewer",
+      "kind": "clarify",
+      "text": "A dimension is a table that describes things in a data warehouse, such as customers or products.",
+      "tag": "sheet entry 2.1 · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 9,
+      "q": 2,
+      "text": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "What is the difference between a star schema and a snowflake schema?",
+      "n": 3,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 12,
+      "q": 3,
+      "text": "star keeps the dimensions flat, snowflake splits them into more tables",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+      "n": 4,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 15,
+      "q": 4,
+      "text": "would ROW_NUMBER over the event id work",
+      "why": "model: answer · wording: question",
+      "read": "question",
+      "chip": "You said: question · not recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "ask",
+      "text": "Was that your answer, or a question for me?"
+     },
+     {
+      "who": "interviewer",
+      "kind": "decline",
+      "text": "I can't say whether an approach is right, and I can't give hints. A person judges the answers. Tell me what you would do, and why.",
+      "tag": "sheet entry c.check · same for everyone who asks"
+     },
+     {
+      "who": "candidate",
+      "id": 18,
+      "q": 4,
+      "text": "I'd keep the first row per event id with ROW_NUMBER and drop the rest",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded"
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "Thanks."
+     },
+     {
+      "who": "interviewer",
+      "kind": "question",
+      "text": "A daily pipeline failed overnight. What do you check first, and why?",
+      "n": 5,
+      "of": 5
+     },
+     {
+      "who": "candidate",
+      "id": 21,
+      "q": 5,
+      "text": "I'd open the scheduler logs for the failed task first, because the error tells me which step broke",
+      "why": "model: answer · wording: not a question",
+      "read": "answer",
+      "chip": "Read as: answer · recorded",
+      "fix": [
+       {
+        "to": "question",
+        "label": "That was a question"
+       }
+      ]
+     },
+     {
+      "who": "interviewer",
+      "kind": "note",
+      "text": "That was the last question. Below is the record a person will read. I have not scored anything."
+     }
+    ],
+    "buttons": [],
+    "record": [
+     {
+      "n": 1,
+      "question": "How would you make a dbt model incremental, so that it only processes new rows?",
+      "answer": "hmm okay, let me think about that for a second I'd filter on updated_at so each run only adds rows newer than the last load",
+      "entries": [
+       "1.1"
+      ],
+      "declined": [],
+      "asks": 0,
+      "waits": 1,
+      "corrections": 0,
+      "moved_on": false,
+      "left_unfinished": ""
+     },
+     {
+      "n": 2,
+      "question": "What is a slowly changing dimension, and how would you keep its history?",
+      "answer": "it's a dimension whose attributes change over time, and type 2 keeps history by adding a new row",
+      "entries": [
+       "2.1"
+      ],
+      "declined": [],
+      "asks": 0,
+      "waits": 1,
+      "corrections": 1,
+      "moved_on": false,
+      "left_unfinished": ""
+     },
+     {
+      "n": 3,
+      "question": "What is the difference between a star schema and a snowflake schema?",
+      "answer": "star keeps the dimensions flat, snowflake splits them into more tables",
+      "entries": [],
+      "declined": [],
+      "asks": 0,
+      "waits": 0,
+      "corrections": 0,
+      "moved_on": false,
+      "left_unfinished": ""
+     },
+     {
+      "n": 4,
+      "question": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+      "answer": "I'd keep the first row per event id with ROW_NUMBER and drop the rest",
+      "entries": [
+       "c.check"
+      ],
+      "declined": [],
+      "asks": 1,
+      "waits": 0,
+      "corrections": 0,
+      "moved_on": false,
+      "left_unfinished": ""
+     },
+     {
+      "n": 5,
+      "question": "A daily pipeline failed overnight. What do you check first, and why?",
+      "answer": "I'd open the scheduler logs for the failed task first, because the error tells me which step broke",
+      "entries": [],
+      "declined": [],
+      "asks": 0,
+      "waits": 0,
+      "corrections": 0,
+      "moved_on": false,
+      "left_unfinished": ""
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,1177 @@
+[
+ {
+  "question": 1,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "is this about dbt I've mostly used Airflow"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: is this about dbt I've mostly used Airflow"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 0.858,
+    "ms": 493,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nPrepared replies:\n- 1.1: use when the candidate asks what dbt is, or whether the question is about dbt, or says they have not used dbt\n- 1.2: use when the candidate asks what incremental means here\n- 1.3: use when the candidate asks what a model is in dbt\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: is this about dbt I've mostly used Airflow"
+     }
+    ],
+    "raw": "{\"entry\": \"1.1\"}",
+    "entry": "1.1",
+    "p": null,
+    "ms": 1363,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 1,
+  "meant": "answer",
+  "n": 1,
+  "action": {
+   "turn": "I'd set materialized to incremental and filter on updated_at with is_incremental, so only new rows get processed"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: I'd set materialized to incremental and filter on updated_at with is_incremental, so only new rows get processed"
+     }
+    ],
+    "raw": "{\"label\": \"answer\"}",
+    "label": "answer",
+    "p": 1.0,
+    "ms": 417,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "agree-answer",
+  "did": "record"
+ },
+ {
+  "question": 1,
+  "meant": "thinking",
+  "n": 1,
+  "action": {
+   "turn": "hmm okay, let me think about that for a second"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: hmm okay, let me think about that for a second"
+     }
+    ],
+    "raw": "{\"label\": \"unfinished\"}",
+    "label": "unfinished",
+    "p": 1.0,
+    "ms": 363,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "unfinished",
+  "did": "wait"
+ },
+ {
+  "question": 1,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "sorry, what does incremental mean here"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: sorry, what does incremental mean here"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 1.0,
+    "ms": 429,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nPrepared replies:\n- 1.1: use when the candidate asks what dbt is, or whether the question is about dbt, or says they have not used dbt\n- 1.2: use when the candidate asks what incremental means here\n- 1.3: use when the candidate asks what a model is in dbt\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: sorry, what does incremental mean here"
+     }
+    ],
+    "raw": "{\"entry\": \"1.2\"}",
+    "entry": "1.2",
+    "p": null,
+    "ms": 435,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 3,
+  "meant": "answer",
+  "n": 1,
+  "action": {
+   "turn": "A star schema joins one fact table straight to denormalised dimensions, a snowflake normalises the dimensions into more tables"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is the difference between a star schema and a snowflake schema?\nCandidate's turn: A star schema joins one fact table straight to denormalised dimensions, a snowflake normalises the dimensions into more tables"
+     }
+    ],
+    "raw": "{\"label\": \"answer\"}",
+    "label": "answer",
+    "p": 1.0,
+    "ms": 479,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "agree-answer",
+  "did": "record"
+ },
+ {
+  "question": 3,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "sorry, could you repeat the second one"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is the difference between a star schema and a snowflake schema?\nCandidate's turn: sorry, could you repeat the second one"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 1.0,
+    "ms": 318,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is the difference between a star schema and a snowflake schema?\nPrepared replies:\n- 3.1: use when the candidate asks what schema means here\n- 3.2: use when the candidate asks whether to define, compare or give examples\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: sorry, could you repeat the second one"
+     }
+    ],
+    "raw": "{\"entry\": \"c.repeat\"}",
+    "entry": "c.repeat",
+    "p": null,
+    "ms": 898,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 3,
+  "meant": "answer",
+  "n": 1,
+  "action": {
+   "turn": "star is flatter, snowflake splits dimensions further, I think"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is the difference between a star schema and a snowflake schema?\nCandidate's turn: star is flatter, snowflake splits dimensions further, I think"
+     }
+    ],
+    "raw": "{\"label\": \"answer\"}",
+    "label": "answer",
+    "p": 1.0,
+    "ms": 395,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "agree-answer",
+  "did": "record"
+ },
+ {
+  "question": 4,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "do you mean during streaming or after the data lands in the warehouse"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: Events sometimes arrive twice from a stream. How would you remove the duplicates?\nCandidate's turn: do you mean during streaming or after the data lands in the warehouse"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 1.0,
+    "ms": 504,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: Events sometimes arrive twice from a stream. How would you remove the duplicates?\nPrepared replies:\n- 4.1: use when the candidate asks whether duplicates are exact copies, or how to tell that two events are the same\n- 4.2: use when the candidate asks whether this is during streaming or after the data is loaded\n- 4.3: use when the candidate asks which system, warehouse or streaming tool is used\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: do you mean during streaming or after the data lands in the warehouse"
+     }
+    ],
+    "raw": "{\"entry\": \"4.2\"}",
+    "entry": "4.2",
+    "p": null,
+    "ms": 1010,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 4,
+  "meant": "answer",
+  "n": 1,
+  "action": {
+   "turn": "I'd give every event an id and keep the first one with ROW_NUMBER over the id"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: Events sometimes arrive twice from a stream. How would you remove the duplicates?\nCandidate's turn: I'd give every event an id and keep the first one with ROW_NUMBER over the id"
+     }
+    ],
+    "raw": "{\"label\": \"answer\"}",
+    "label": "answer",
+    "p": 1.0,
+    "ms": 418,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "agree-answer",
+  "did": "record"
+ },
+ {
+  "question": 4,
+  "meant": "unsure",
+  "n": 1,
+  "action": {
+   "turn": "would ROW_NUMBER over the event id work"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: Events sometimes arrive twice from a stream. How would you remove the duplicates?\nCandidate's turn: would ROW_NUMBER over the event id work"
+     }
+    ],
+    "raw": "{\"label\": \"answer\"}",
+    "label": "answer",
+    "p": 1.0,
+    "ms": 361,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "disagree",
+  "did": "ask"
+ },
+ {
+  "question": 2,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "what do you mean by dimension here, like in a data warehouse"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nCandidate's turn: what do you mean by dimension here, like in a data warehouse"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 1.0,
+    "ms": 489,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nPrepared replies:\n- 2.1: use when the candidate asks what a dimension is, or what dimension means here\n- 2.2: use when the candidate asks whether a particular type is meant, such as type 1 or type 2\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: what do you mean by dimension here, like in a data warehouse"
+     }
+    ],
+    "raw": "{\"entry\": \"2.1\"}",
+    "entry": "2.1",
+    "p": null,
+    "ms": 1025,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 2,
+  "meant": "thinking",
+  "n": 1,
+  "action": {
+   "turn": "uh so, like type two"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nCandidate's turn: uh so, like type two"
+     }
+    ],
+    "raw": "{\"label\": \"unfinished\"}",
+    "label": "unfinished",
+    "p": 0.999,
+    "ms": 380,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "unfinished",
+  "did": "wait"
+ },
+ {
+  "question": 2,
+  "meant": "answer",
+  "n": 1,
+  "action": {
+   "turn": "it's a dimension where attributes change over time, and type 2 keeps history by adding a new row with valid from and to dates"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nCandidate's turn: it's a dimension where attributes change over time, and type 2 keeps history by adding a new row with valid from and to dates"
+     }
+    ],
+    "raw": "{\"label\": \"answer\"}",
+    "label": "answer",
+    "p": 1.0,
+    "ms": 402,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "agree-answer",
+  "did": "record"
+ },
+ {
+  "question": 1,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "can I answer this with Spark instead"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: can I answer this with Spark instead"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 0.995,
+    "ms": 453,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nPrepared replies:\n- 1.1: use when the candidate asks what dbt is, or whether the question is about dbt, or says they have not used dbt\n- 1.2: use when the candidate asks what incremental means here\n- 1.3: use when the candidate asks what a model is in dbt\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: can I answer this with Spark instead"
+     }
+    ],
+    "raw": "{\"entry\": \"c.tools\"}",
+    "entry": "c.tools",
+    "p": null,
+    "ms": 1044,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 1,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "what is a model in dbt"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: what is a model in dbt"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 1.0,
+    "ms": 396,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nPrepared replies:\n- 1.1: use when the candidate asks what dbt is, or whether the question is about dbt, or says they have not used dbt\n- 1.2: use when the candidate asks what incremental means here\n- 1.3: use when the candidate asks what a model is in dbt\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: what is a model in dbt"
+     }
+    ],
+    "raw": "{\"entry\": \"1.3\"}",
+    "entry": "1.3",
+    "p": null,
+    "ms": 406,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 1,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "can you give me a hint"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: can you give me a hint"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 0.991,
+    "ms": 449,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nPrepared replies:\n- 1.1: use when the candidate asks what dbt is, or whether the question is about dbt, or says they have not used dbt\n- 1.2: use when the candidate asks what incremental means here\n- 1.3: use when the candidate asks what a model is in dbt\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: can you give me a hint"
+     }
+    ],
+    "raw": "{\"entry\": \"c.check\"}",
+    "entry": "c.check",
+    "p": null,
+    "ms": 406,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "decline"
+ },
+ {
+  "question": 2,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "do you want type 1 or type 2"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nCandidate's turn: do you want type 1 or type 2"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 0.992,
+    "ms": 529,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nPrepared replies:\n- 2.1: use when the candidate asks what a dimension is, or what dimension means here\n- 2.2: use when the candidate asks whether a particular type is meant, such as type 1 or type 2\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: do you want type 1 or type 2"
+     }
+    ],
+    "raw": "{\"entry\": \"2.2\"}",
+    "entry": "2.2",
+    "p": null,
+    "ms": 936,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 2,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "what is the salary for this role"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nCandidate's turn: what is the salary for this role"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 0.999,
+    "ms": 392,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nPrepared replies:\n- 2.1: use when the candidate asks what a dimension is, or what dimension means here\n- 2.2: use when the candidate asks whether a particular type is meant, such as type 1 or type 2\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: what is the salary for this role"
+     }
+    ],
+    "raw": "{\"entry\": \"none\"}",
+    "entry": "none",
+    "p": null,
+    "ms": 339,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "decline"
+ },
+ {
+  "question": 3,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "how long should my answer be"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is the difference between a star schema and a snowflake schema?\nCandidate's turn: how long should my answer be"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 0.53,
+    "ms": 398,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is the difference between a star schema and a snowflake schema?\nPrepared replies:\n- 3.1: use when the candidate asks what schema means here\n- 3.2: use when the candidate asks whether to define, compare or give examples\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: how long should my answer be"
+     }
+    ],
+    "raw": "{\"entry\": \"c.length\"}",
+    "entry": "c.length",
+    "p": null,
+    "ms": 899,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 4,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "are the duplicates exact copies"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: Events sometimes arrive twice from a stream. How would you remove the duplicates?\nCandidate's turn: are the duplicates exact copies"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 1.0,
+    "ms": 443,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: Events sometimes arrive twice from a stream. How would you remove the duplicates?\nPrepared replies:\n- 4.1: use when the candidate asks whether duplicates are exact copies, or how to tell that two events are the same\n- 4.2: use when the candidate asks whether this is during streaming or after the data is loaded\n- 4.3: use when the candidate asks which system, warehouse or streaming tool is used\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: are the duplicates exact copies"
+     }
+    ],
+    "raw": "{\"entry\": \"4.1\"}",
+    "entry": "4.1",
+    "p": null,
+    "ms": 1090,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 5,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "which scheduler is it"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: A daily pipeline failed overnight. What do you check first, and why?\nCandidate's turn: which scheduler is it"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 0.999,
+    "ms": 410,
+    "error": null
+   },
+   {
+    "purpose": "entry",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "A candidate in a job interview asked the interviewer something. The interviewer may only give a prepared reply.\nPick the one prepared reply whose description matches what the candidate asked.\nIf none of them matches, pick \"none\". Do not pick a reply only because it is on a similar topic.\nReply only with JSON: {\"entry\": \"<id>\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: A daily pipeline failed overnight. What do you check first, and why?\nPrepared replies:\n- 5.1: use when the candidate asks what the pipeline does, or which tool runs it\n- 5.2: use when the candidate asks what logs, alerts or monitoring are available\n- 5.3: use when the candidate asks whether to fix the problem or only find the cause\n- c.repeat: use when the candidate asks to hear, see or repeat the question again\n- c.tools: use when the candidate asks whether they may answer with a different tool, language or system than the one named\n- c.length: use when the candidate asks how long or how detailed the answer should be\n- c.time: use when the candidate asks for a moment to think\n- c.check: use when the candidate asks whether their own idea, approach or answer is right, or asks for a hint\nCandidate asked: which scheduler is it"
+     }
+    ],
+    "raw": "{\"entry\": \"5.1\"}",
+    "entry": "5.1",
+    "p": null,
+    "ms": 1076,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "agree-question",
+  "did": "clarify"
+ },
+ {
+  "question": 5,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "should I fix it or just find out why"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: A daily pipeline failed overnight. What do you check first, and why?\nCandidate's turn: should I fix it or just find out why"
+     }
+    ],
+    "raw": "{\"label\": \"unfinished\"}",
+    "label": "unfinished",
+    "p": 0.948,
+    "ms": 411,
+    "error": null
+   }
+  ],
+  "wording_says_question": true,
+  "edge": "unfinished",
+  "did": "wait"
+ },
+ {
+  "question": 5,
+  "meant": "answer",
+  "n": 1,
+  "action": {
+   "turn": "I'd open the scheduler logs for the failed task first, because the error and the step tell me where to look"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: A daily pipeline failed overnight. What do you check first, and why?\nCandidate's turn: I'd open the scheduler logs for the failed task first, because the error and the step tell me where to look"
+     }
+    ],
+    "raw": "{\"label\": \"answer\"}",
+    "label": "answer",
+    "p": 1.0,
+    "ms": 356,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "agree-answer",
+  "did": "record"
+ },
+ {
+  "question": 5,
+  "meant": "thinking",
+  "n": 1,
+  "action": {
+   "turn": "okay so a failed pipeline, um"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: A daily pipeline failed overnight. What do you check first, and why?\nCandidate's turn: okay so a failed pipeline, um"
+     }
+    ],
+    "raw": "{\"label\": \"unfinished\"}",
+    "label": "unfinished",
+    "p": 1.0,
+    "ms": 398,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "unfinished",
+  "did": "wait"
+ },
+ {
+  "question": 1,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "so this is the dbt incremental thing"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: so this is the dbt incremental thing"
+     }
+    ],
+    "raw": "{\"label\": \"unfinished\"}",
+    "label": "unfinished",
+    "p": 0.992,
+    "ms": 488,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "unfinished",
+  "did": "wait"
+ },
+ {
+  "question": 1,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "I haven't used dbt before"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: How would you make a dbt model incremental, so that it only processes new rows?\nCandidate's turn: I haven't used dbt before"
+     }
+    ],
+    "raw": "{\"label\": \"unfinished\"}",
+    "label": "unfinished",
+    "p": 0.588,
+    "ms": 362,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "unfinished",
+  "did": "wait"
+ },
+ {
+  "question": 2,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "dimension as in the warehouse sense"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nCandidate's turn: dimension as in the warehouse sense"
+     }
+    ],
+    "raw": "{\"label\": \"unfinished\"}",
+    "label": "unfinished",
+    "p": 0.964,
+    "ms": 395,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "unfinished",
+  "did": "wait"
+ },
+ {
+  "question": 2,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "I'm not sure what you mean by dimension"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is a slowly changing dimension, and how would you keep its history?\nCandidate's turn: I'm not sure what you mean by dimension"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 0.999,
+    "ms": 371,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "disagree",
+  "did": "ask"
+ },
+ {
+  "question": 3,
+  "meant": "question",
+  "n": 1,
+  "action": {
+   "turn": "not sure what schema means here"
+  },
+  "calls": [
+   {
+    "purpose": "label",
+    "model": "qwen2.5:7b",
+    "sent": [
+     {
+      "role": "system",
+      "content": "You read one turn from a candidate in a technical job interview. Label it:\n- answer: the candidate attempts to answer the interviewer's question, even if unsure or phrased tentatively\n- question: the candidate asks the interviewer something (to clarify a term, repeat, or check what is meant)\n- unfinished: thinking aloud or stalling, with no answer and no question yet\nReply only with JSON: {\"label\": \"answer\" | \"question\" | \"unfinished\"}"
+     },
+     {
+      "role": "user",
+      "content": "Interviewer's question: What is the difference between a star schema and a snowflake schema?\nCandidate's turn: not sure what schema means here"
+     }
+    ],
+    "raw": "{\"label\": \"question\"}",
+    "label": "question",
+    "p": 0.996,
+    "ms": 397,
+    "error": null
+   }
+  ],
+  "wording_says_question": false,
+  "edge": "disagree",
+  "did": "ask"
+ }
+]

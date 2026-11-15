@@ -1,0 +1,51 @@
+Sheet-entry picker: what was tried on 14 Nov 2026, and why the prompt stayed as it was.
+Model qwen2.5:7b through Ollama, temperature 0. These were one-off runs on dev questions written
+by Claude (the AI assistant), pasted here as they came out. They are debugging notes, not evidence
+that the picker works. The questions are now in replay/dev-turns.tsv, so the last run can be repeated.
+
+The problem
+  In the replayed interview, "would ROW_NUMBER over the event id work" was answered with sheet
+  entry 4.1 ("Assume a duplicate has the same event id as the original") instead of the no-hints
+  reply (c.check). A question about the candidate's own idea had been given a clarification.
+
+1. Two changes to the prompt, each tried on dev questions
+  A. prompt as it is                                              14/15
+       NO  want c.check  got 4.1      | would ROW_NUMBER over the event id work
+  B. prompt adds "a reply never judges the candidate's own idea"  11/15
+       NO  want c.check  got 4.1      | would ROW_NUMBER over the event id work
+       NO  want c.check  got none     | should I mention surrogate keys
+       NO  want c.check  got 5.2      | is checking the logs first the right thing to do
+       NO  want 1.1      got c.tools  | is this about dbt I've mostly used Airflow
+  C. model first names the kind of question, then the entry;
+     code forces the no-hints reply when the kind is "own idea"   10/18  (entry alone 14/18)
+       It called 7 plain questions "own idea", for example "what does incremental mean here".
+  Both were dropped.
+
+2. Two changes to the common entries, on 20 dev questions
+  A. sheet as it is                                               19/20
+       NO  want c.check  got 4.1      | would ROW_NUMBER over the event id work
+  G. the no-hints entry also says "or would work"                 19/20
+       NO  want c.check  got 1.1      | could I do it with a where clause on the load date
+  H. as G, with the common entries listed first                   15/20
+  G moved the error, H made it worse. Both were dropped.
+
+3. Looking at where the wrong picks were
+  All three approach-checking questions on question 4 went to entry 4.1:
+       would ROW_NUMBER over the event id work
+       can I just use distinct
+       would a group by on the event id do it
+  The six on the other questions all got the no-hints reply.
+  Entry 4.1 was described as "asks whether duplicates are exact copies, or how to tell that two
+  events are the same". The second half describes the answer to the interview question, not a term.
+
+4. The fix: reword that one sheet entry
+  4.1 now reads: when the candidate "asks whether a duplicate event is an exact copy of the
+  original", say "Yes. Assume a duplicate is an exact copy of the original event."
+  On 25 dev questions: 25/25 got the intended entry, and 11/11 approach-checking questions got
+  the no-hints reply.
+  Repeatable version: results/2026-11-14-dev-turns-run3.txt (30 of 31 entries as expected).
+
+What I take from it
+  The description of a sheet entry must name a term or the task, never the answer. A badly
+  described entry leaks; changing the prompt did not help. A wrong pick can still only give
+  another prepared reply, never new text.

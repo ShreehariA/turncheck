@@ -70,7 +70,7 @@
         "say": "A dimension is a table that describes things in a data warehouse, such as customers or products."},
        {"id": "2.2",
         "when": "asks whether a particular type is meant, such as type 1 or type 2",
-        "say": "Any type is fine. Say which one you are describing."}
+        "say": "Describe the type you would use to keep history, and say which one it is."}
      ]},
 
     {"id": 3,
@@ -81,7 +81,7 @@
         "say": "Here a schema is the way the tables in a data warehouse are laid out and joined."},
        {"id": "3.2",
         "when": "asks whether to define, compare or give examples",
-        "say": "Say how the two differ, and when you would choose each."}
+        "say": "Say how the two differ. An example is welcome but not needed."}
      ]},
 
     {"id": 4,
@@ -106,7 +106,7 @@
         "say": "Assume a daily batch job that loads files into a warehouse, run by a scheduler such as Airflow."},
        {"id": "5.2",
         "when": "asks what logs, alerts or monitoring are available",
-        "say": "Assume you have the scheduler's logs and nothing else."},
+        "say": "Assume the scheduler's run history and logs, and an alert that told you the run failed."},
        {"id": "5.3",
         "when": "asks whether to fix the problem or only find the cause",
         "say": "Say what you would look at first and why. A full fix is not needed."}

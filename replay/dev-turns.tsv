@@ -1,5 +1,6 @@
 # Dev turns: written by Claude (the AI assistant) while building, and used to debug.
-# They are NOT evidence that TurnCheck works. See heldout.tsv for turns the author wrote unseen.
+# They are NOT evidence that TurnCheck works. stress-turns.tsv holds turns written to break the rule
+# after it was frozen; heldout.tsv is empty until a person writes some.
 #
 # question number | what was meant (answer, question, thinking, unsure) | the turn | sheet entry expected (optional)
 

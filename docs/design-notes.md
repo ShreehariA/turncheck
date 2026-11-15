@@ -19,8 +19,8 @@ Short answers to what the module's lectures ask of a Phase 2 project. The report
 
 **The case against it:**
 - It cannot answer a fair question the sheet did not foresee. It declines. That is the price of every candidate getting the same help.
-- The second reading only looks at word order. When both readings are wrong together, nothing catches it but the candidate's tap.
-- A turn that is an answer and a question at once ("I'd use a merge, does that sound right") gets one label.
+- The second reading only looks at word order. When both readings are wrong together, nothing catches it but the candidate's tap. The stress turns found two: "I'm assuming the duplicates are exact copies" and "I don't know how much detail you want" were recorded as answers.
+- A turn that is an answer and a question at once ("I'd filter on the updated timestamp, does that make sense") gets one label. All 6 such stress turns were recorded as plain answers, so the check got no reply.
 
 ## The graph, and the edge still missing (Lecture 15)
 
@@ -35,13 +35,14 @@ The graph is `turn-graph.drawio` (and `.svg`). The code is `turncheck/controller
 The inference, in the candidate's words: "Was that my answer?"
 
 - **No confidence threshold.** On the dev turns the model's probability for its own label was 0.95 or higher on 36 of 41 turns, including 8 of the 9 labels it got wrong (`results/2026-11-14-dev-turns-run3.txt`). A number that barely moves cannot set a threshold. So the bands are: both readings agree, act; they disagree, ask; thinking aloud, wait.
+- **What the stress turns add.** There the probability was below 0.95 on 4 of the 5 wrong labels (0.74, 0.76, 0.87, 0.94), but 0.97 or more on all 6 answer-and-check turns (`results/2026-11-15-stress-turns.txt`). So a threshold might catch some questions phrased as statements and would miss the rest. It is not used. Trying it as a third reading is a next step.
 - **2:** thinking-aloud turns in a row before TurnCheck offers a way out.
 - **10 seconds:** the longest TurnCheck waits for the model before it asks the candidate instead.
 - **Until the next turn:** how long a reading can be corrected.
 - **Asymmetry:** TurnCheck leans towards asking. A question recorded as an answer can cost the candidate that answer; an extra question costs one tap.
 - **What the candidate sees:** the label under each turn, with both readings. **How they overrule it:** one tap on that label. **What the log keeps:** both readings, the edge taken and every model call.
 
-None of these numbers has been tested with people.
+None of these numbers has been tested with people, and every test turn so far was written by the AI assistant.
 
 ## Sensors and their privacy cost (Lecture 16)
 

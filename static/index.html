@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TurnCheck</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header>
+      <div class="top"><span>TurnCheck</span><span id="progress"></span></div>
+      <div id="indicator" role="status"></div>
+      <div id="banner" role="alert" hidden></div>
+    </header>
+
+    <section id="intro" hidden>
+      <h1 id="title"></h1>
+      <ul id="rules"></ul>
+      <button id="start" class="primary">Start</button>
+      <p class="small">Everything runs on this computer. Each interview is saved to a file in the sessions folder and sent nowhere.</p>
+    </section>
+
+    <section id="question" hidden></section>
+    <ol id="items" aria-live="polite"></ol>
+    <div id="buttons"></div>
+
+    <form id="say" hidden>
+      <input id="text" autocomplete="off" aria-label="Your turn" placeholder="Type what you would say">
+      <button class="primary">Send</button>
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.DS_Store
+# One file per interview you run by hand; yours to inspect, not part of the repo.
+sessions/

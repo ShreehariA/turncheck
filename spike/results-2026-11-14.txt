@@ -1,0 +1,17 @@
+Model: qwen2.5:7b (Ollama), temperature 0, question marks removed
+
+ok  expected question got question | model question   p=0.90 | form question | 0.45s | is this about dbt I've mostly used Airflow
+ok  expected answer   got answer   | model answer     p=1.00 | form -        | 0.46s | I'd set materialized to incremental and filter on updated_at with is_incremental, so only new rows get processed
+ok  expected wait     got wait     | model unfinished p=1.00 | form -        | 0.53s | hmm okay, let me think about that for a second
+ok  expected question got question | model question   p=1.00 | form question | 0.55s | sorry, what does incremental mean here
+ok  expected answer   got answer   | model answer     p=1.00 | form -        | 0.78s | A star schema joins one fact table straight to denormalised dimensions, a snowflake normalises the dimensions into more tables
+ok  expected question got question | model question   p=1.00 | form question | 0.50s | sorry, could you repeat the second one
+ok  expected answer   got answer   | model answer     p=1.00 | form -        | 0.57s | star is flatter, snowflake splits dimensions further, I think
+ok  expected question got question | model question   p=1.00 | form question | 0.58s | do you mean during streaming or after the data lands in the warehouse
+ok  expected answer   got answer   | model answer     p=1.00 | form -        | 0.45s | I'd give every event an id and keep the first one with ROW_NUMBER over the id
+ok  expected ask      got ask      | model answer     p=1.00 | form question | 0.36s | would ROW_NUMBER over the event id work
+ok  expected question got question | model question   p=1.00 | form question | 0.45s | what do you mean by dimension here, like in a data warehouse
+ok  expected wait     got wait     | model unfinished p=0.97 | form -        | 0.37s | uh so, like type two
+ok  expected answer   got answer   | model answer     p=1.00 | form -        | 0.38s | it's a dimension where attributes change over time, and type 2 keeps history by adding a new row with valid from and to dates
+
+13/13 turns handled as expected; median 0.46s per model call

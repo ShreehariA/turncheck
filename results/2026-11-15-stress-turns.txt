@@ -1,0 +1,68 @@
+30 turns from stress-turns.tsv · model qwen2.5:7b · script data-engineer.json · 2026-11-15 18:18
+Question marks are removed before reading, as a transcript may not have them.
+
+MISS        | Q4 meant question | did record           | model answer     p=0.74 | wording -        | 0.22s | I'm assuming the duplicates are exact copies
+other       | Q5 meant question | did wait             | model unfinished p=0.76 | wording -        | 0.27s | I'd need to know which tool runs the pipeline
+asked       | Q1 meant question | did ask              | model question   p=1.00 | wording -        | 0.27s | tell me what incremental means here
+asked       | Q1 meant question | did ask              | model question   p=0.81 | wording -        | 0.18s | I was wondering if I can answer with Spark
+asked       | Q3 meant question | did ask              | model question   p=0.99 | wording -        | 0.22s | sorry, I didn't catch the second part
+asked       | Q4 meant question | did ask              | model question   p=0.98 | wording -        | 0.27s | before I answer, which warehouse is this on
+other       | Q4 meant question | did wait             | model unfinished p=0.87 | wording -        | 0.18s | it depends whether you mean in the stream or after loading
+MISS        | Q3 meant question | did record           | model answer     p=0.98 | wording -        | 0.22s | I don't know how much detail you want
+asked       | Q2 meant question | did ask              | model question   p=0.92 | wording -        | 0.22s | a hint would help here
+asked       | Q1 meant question | did ask              | model question   p=1.00 | wording -        | 0.27s | so by model you mean a SQL file
+asked       | Q1 meant answer   | did ask              | model answer     p=1.00 | wording question | 0.21s | what I'd do is set it to incremental and only pick up rows newer than the last run
+asked       | Q4 meant answer   | did ask              | model answer     p=1.00 | wording question | 0.27s | how I'd do it is keep the first row for each event id and drop the rest
+asked       | Q2 meant answer   | did ask              | model answer     p=1.00 | wording question | 0.27s | when a value changes you close the old row and add a new one with new dates
+asked       | Q5 meant answer   | did ask              | model answer     p=1.00 | wording question | 0.27s | why it failed is the first thing, so I'd read the error in the scheduler log
+asked       | Q4 meant answer   | did ask              | model answer     p=1.00 | wording question | 0.27s | do a merge on the event id so a second copy never gets inserted
+asked       | Q1 meant answer   | did ask              | model answer     p=1.00 | wording question | 0.28s | can't remember the exact syntax but you filter on a timestamp inside an incremental block
+asked       | Q2 meant answer   | did ask              | model answer     p=1.00 | wording question | 0.27s | would be type 2 for me, a new row for every change with valid from and valid to
+asked       | Q5 meant answer   | did ask              | model answer     p=1.00 | wording question | 0.27s | is the upstream file there, that's what I'd check first, because most failures are missing data
+other       | Q1 meant thinking | did decline none     | model question   p=0.94 | wording question | 0.45s | what's the word for it
+asked       | Q3 meant thinking | did ask              | model unfinished p=1.00 | wording question | 0.21s | how do I put this
+asked       | Q5 meant thinking | did ask              | model unfinished p=1.00 | wording question | 0.21s | where would I even start
+ok          | Q4 meant thinking | did wait             | model unfinished p=1.00 | wording -        | 0.21s | I'd probably, hmm
+ok          | Q2 meant thinking | did wait             | model unfinished p=0.99 | wording -        | 0.27s | so you'd take the old row and, no wait
+asked       | Q1 meant thinking | did ask              | model unfinished p=1.00 | wording question | 0.27s | is it incremental, is it, um
+other       | Q2 meant unsure   | did record           | model answer     p=0.97 | wording -        | 0.21s | type 2, right
+other       | Q4 meant unsure   | did record           | model answer     p=1.00 | wording -        | 0.27s | keep the latest one per event id, or is that not what you mean
+other       | Q1 meant unsure   | did record           | model answer     p=1.00 | wording -        | 0.31s | I'd filter on the updated timestamp, does that make sense
+other       | Q3 meant unsure   | did record           | model answer     p=1.00 | wording -        | 0.22s | star is the simpler one, isn't it
+other       | Q5 meant unsure   | did record           | model answer     p=1.00 | wording -        | 0.28s | check the logs first, I guess, is that what you're after
+other       | Q4 meant unsure   | did record           | model answer     p=1.00 | wording -        | 0.28s | you'd dedupe on the id, I think, if they really are exact copies
+
+Handled as meant: 2 of 30
+  answer 0/8 · question 0/10 · thinking 2/6 · unsure 0/6
+Not as meant:
+  asked instead (one extra tap; the candidate decides): 17
+  MISS (a question recorded as an answer): 2
+  FALSE ALARM (an answer treated as a question): 0
+  other: meant question, treated as thinking: I'd need to know which tool runs the pipeline
+  other: meant question, treated as thinking: it depends whether you mean in the stream or after loading
+  other: meant thinking, treated as question: what's the word for it
+  other: meant unsure, treated as answer: type 2, right
+  other: meant unsure, treated as answer: keep the latest one per event id, or is that not what you mean
+  other: meant unsure, treated as answer: I'd filter on the updated timestamp, does that make sense
+  other: meant unsure, treated as answer: star is the simpler one, isn't it
+  other: meant unsure, treated as answer: check the logs first, I guess, is that what you're after
+  other: meant unsure, treated as answer: you'd dedupe on the id, I think, if they really are exact copies
+A fixed script would have recorded all 10 question turns and 6 thinking turns as answers.
+
+The model alone, against what was meant (unsure turns left out): 19 of 24 labels right
+Its probability for its own label was 0.95 or higher on 18 of 24 turns; on the 5 it got wrong: 0.74, 0.76, 0.87, 0.98, 0.94
+Label call: median 0.27s, slowest 0.31s. A turn read as a question needs a second call.
+
+Sheet entry given to each question (check these by hand). Where one tap was needed first, it is shown.
+Entry as the file expects: 10 of 10 questions that name one
+  Q4 4.1       ok                    | I'm assuming the duplicates are exact copies   [after tapping 'That was a question']
+  Q5 5.1       ok                    | I'd need to know which tool runs the pipeline   [after tapping 'That was a question']
+  Q1 1.2       ok                    | tell me what incremental means here   [after tapping 'A question']
+  Q1 c.tools   ok                    | I was wondering if I can answer with Spark   [after tapping 'A question']
+  Q3 c.repeat  ok                    | sorry, I didn't catch the second part   [after tapping 'A question']
+  Q4 4.3       ok                    | before I answer, which warehouse is this on   [after tapping 'A question']
+  Q4 4.2       ok                    | it depends whether you mean in the stream or after loading   [after tapping 'That was a question']
+  Q3 c.length  ok                    | I don't know how much detail you want   [after tapping 'That was a question']
+  Q2 c.check   ok                    | a hint would help here   [after tapping 'A question']
+  Q1 1.3       ok                    | so by model you mean a SQL file   [after tapping 'A question']
+  Q1 none                            | what's the word for it

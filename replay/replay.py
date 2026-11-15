@@ -6,7 +6,7 @@
         Each line of the file:  question number | answer, question, thinking or unsure | the turn
         A question may add a fourth part: the sheet entry it should get (or none).
 
-    python3 replay/replay.py interview replay/storyboards/1-three-readings.json
+    python3 replay/replay.py interview replay/storyboard-interview.json
         Runs the listed actions in order and saves every step and screen to
         results/traces/. View a step at http://localhost:8000/?trace=NAME&step=N
 

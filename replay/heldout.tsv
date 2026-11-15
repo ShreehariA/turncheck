@@ -1,5 +1,11 @@
-# Held-out test turns: written by the author, not by the AI assistant, and not shown to it
-# until the prompt and the wording rule were frozen (git tag frozen-v1).
+# Held-out test turns written by a person: none yet. This file is empty on purpose.
+#
+# Every test turn in this repository was written by the AI assistant: dev-turns.tsv while
+# building, and stress-turns.tsv after the rule was frozen (git tag frozen-v1).
+# A set written by a person who has not seen the prompt or the wording check is still needed.
+# When it exists it goes here, and is run once with no tuning:
+#
+#     python3 replay/replay.py turns replay/heldout.tsv
 #
 # One turn per line:    question number | what you meant | the turn, as you would say it
 #

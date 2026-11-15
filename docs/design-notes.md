@@ -34,7 +34,7 @@ The graph is `turn-graph.drawio` (and `.svg`). The code is `turncheck/controller
 
 The inference, in the candidate's words: "Was that my answer?"
 
-- **No confidence threshold.** On my dev turns the model's probability for its own label was 0.95 or higher on 36 of 41 turns, including 8 of the 9 labels it got wrong (`results/2026-11-14-dev-turns-run3.txt`). A number that barely moves cannot set a threshold. So the bands are: both readings agree, act; they disagree, ask; thinking aloud, wait.
+- **No confidence threshold.** On the dev turns the model's probability for its own label was 0.95 or higher on 36 of 41 turns, including 8 of the 9 labels it got wrong (`results/2026-11-14-dev-turns-run3.txt`). A number that barely moves cannot set a threshold. So the bands are: both readings agree, act; they disagree, ask; thinking aloud, wait.
 - **2:** thinking-aloud turns in a row before TurnCheck offers a way out.
 - **10 seconds:** the longest TurnCheck waits for the model before it asks the candidate instead.
 - **Until the next turn:** how long a reading can be corrected.

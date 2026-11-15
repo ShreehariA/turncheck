@@ -25,7 +25,7 @@ Built for Intelligent Interactive Systems, Assignment 2 (University of Birmingha
 - Speech. Turns are typed, and question marks are removed because a transcript may not have them.
 
 **Not finished**
-- No result yet on turns I wrote without the AI seeing them (`replay/heldout.tsv`). Everything in `results/` so far uses dev turns the AI wrote, so it shows the system runs, not how well it reads.
+- No test on turns written by a person. The AI wrote every test turn in this repository, so `results/` shows that the system runs and where it breaks, not how well it reads real candidates. `replay/heldout.tsv` is empty and waits for a person's turns.
 - A reading can only be corrected until the next turn.
 - One role, five questions, one interview at a time.
 
@@ -43,7 +43,7 @@ Built for Intelligent Interactive Systems, Assignment 2 (University of Birmingha
 | `qwen2.5:7b` (4.7 GB) | labels a turn, and names a sheet entry for a question, each as fixed-schema JSON | in use |
 | Wording check (regular expressions) | the second reading: is the turn phrased as a question? | in use |
 | HTML, CSS and JavaScript, no framework | the screen; it only draws what the controller sends | in use |
-| draw.io | the two diagrams in `docs/` | in use |
+| draw.io file format | the two diagrams in `docs/`, written and checked for crossing lines by `docs/make_diagrams.py` | in use |
 | Speech-to-text | spoken turns | planned, tool undecided |
 
 ## Running or inspecting the work
@@ -77,11 +77,12 @@ Change `step` from 0 to 12.
 python3 -m unittest discover tests                        # no model needed
 python3 replay/replay.py turns replay/dev-turns.tsv       # needs Ollama
 python3 replay/replay.py interview replay/storyboard-interview.json
+python3 docs/make_diagrams.py                             # rewrites both diagrams, checks no lines cross
 ```
 
 ## Development record
 
-Commits: <https://github.com/ShreehariA/turncheck/commits/main>. I made the first eight together on 15 Nov, once the build worked, one commit per part. The steps below came before those commits, so the evidence for each step is the file it names, not the commit time.
+Commits: <https://github.com/ShreehariA/turncheck/commits/main>. I made the first nine myself, the first eight together on 15 Nov, once the build worked, one per part. From the tenth on, the AI made the commits at my request, and each carries its co-author line. The steps of 23 Oct and 14 Nov came before their commits, so the evidence for each is the file it names, not the commit time.
 
 | When | Change | Why | What was checked | Commit |
 |---|---|---|---|---|
@@ -97,12 +98,12 @@ Dev replay so far (42 turns the AI wrote, `results/2026-11-14-dev-turns-run3.txt
 
 ## AI assistance
 
-- **Tool:** Claude Code in the terminal: Claude Opus 5.5 for the October draft, Claude Fable 5.2 for the build on 14 November, and Claude Opus 5.5 again from 15 November.
-- **What I asked it for:** the spike; the controller, screen, replay harness and tests; the dev turns; first drafts of the interview questions and sheets; the diagrams; this README.
-- **What I set:** the problem, from my own AI interview; no paid service and no key; a local model; that the AI never scores; diagrams in draw.io, black and white, with no crossing lines; and that I make every commit myself.
+- **Tool:** Claude Code in the terminal. Claude Fable 5.2 did the build (14 November) and the finishing work (15 November). Claude Opus 5.5 did the October draft and one check of the public repository on 15 November.
+- **What the AI did:** almost all of the building and writing: the spike; the controller, screen, replay harness and tests; every test turn; the interview questions and sheets; the diagrams and screenshots; this README; and the commits from the tenth on.
+- **What I set:** the problem, from my own AI interview; no paid service and no key; a local model; that the AI never scores; diagrams in draw.io format, black and white, with no crossing lines.
 - **What it proposed and I accepted:** the two readings and "ask when they disagree"; the fixed sheet; standard library only.
-- **What I changed:** TODO, after editing the questions and sheets.
-- **How I checked:** TODO. Planned: write the held-out turns without showing them to the AI until the rule is frozen, run an interview by hand, and read every line of the replay results.
+- **What I changed:** the diagrams, which I asked to be redone in draw.io format in my usual style, and who commits: I made the first nine commits, then asked the AI to finish the work and commit it. The code, questions and sheets are as the AI wrote them.
+- **How it was checked:** every check recorded here was run by the AI, at my request: a test per edge, the replays in `results/`, both diagrams opened in draw.io's viewer, a fresh clone of this repository run from this README, and the report's lecture and guideline claims against the slides and papers. No test turn was written by a person.
 - The agent's standing rules are in `AGENTS.md`.
 
 ## Additional files

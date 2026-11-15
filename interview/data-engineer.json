@@ -1,0 +1,115 @@
+{
+  "title": "Practice interview: junior data engineer",
+
+  "intro": [
+    "Type each turn as you would say it. Typing stands in for speech in this prototype.",
+    "You can ask what a term means, or ask me to repeat a question. My replies come from a prepared sheet, the same for every candidate, so I can't give hints.",
+    "After each turn I show how I read it: your answer, a question, or still thinking. If I read it wrong, one tap fixes it.",
+    "I can misread a turn. When I'm not sure, I ask you.",
+    "I don't score anything. A person reads the record, and you see it at the end."
+  ],
+
+  "phrases": {
+    "next": "Thanks.",
+    "ask": "Was that your answer, or a question for me?",
+    "ask_no_model": "I couldn't read that turn. Was it your answer, or a question for me?",
+    "stuck": "No rush. Do you want to keep thinking, hear the question again, or move on?",
+    "repeat": "The question again:",
+    "decline": "I can't help with that one. I can only give the clarifications prepared for this question, the same for every candidate. Answer it as you see it.",
+    "back": "Sorry, I took that as your answer. Going back to question {n}.",
+    "moved_on": "Moving on. No answer is recorded for that question.",
+    "end": "That was the last question. Below is the record a person will read. I have not scored anything."
+  },
+
+  "buttons": {
+    "answer": "My answer",
+    "question": "A question",
+    "thinking": "Still thinking",
+    "keep": "Keep thinking",
+    "repeat": "Repeat the question",
+    "move_on": "Move on"
+  },
+
+  "common": [
+    {"id": "c.repeat", "repeat": true,
+     "when": "asks to hear, see or repeat the question again"},
+    {"id": "c.tools",
+     "when": "asks whether they may answer with a different tool, language or system than the one named",
+     "say": "Yes. Use the tools you know, and say which ones."},
+    {"id": "c.length",
+     "when": "asks how long or how detailed the answer should be",
+     "say": "A few sentences are enough: the main idea, then one detail."},
+    {"id": "c.time",
+     "when": "asks for a moment to think",
+     "say": "Take your time. I'll wait."},
+    {"id": "c.check", "decline": true,
+     "when": "asks whether their own idea, approach or answer is right, or asks for a hint",
+     "say": "I can't say whether an approach is right, and I can't give hints. A person judges the answers. Tell me what you would do, and why."}
+  ],
+
+  "questions": [
+    {"id": 1,
+     "ask": "How would you make a dbt model incremental, so that it only processes new rows?",
+     "sheet": [
+       {"id": "1.1",
+        "when": "asks what dbt is, or whether the question is about dbt, or says they have not used dbt",
+        "say": "dbt is a tool that builds warehouse tables from SQL files called models. If you haven't used it, describe how you would do the same with a tool you know."},
+       {"id": "1.2",
+        "when": "asks what incremental means here",
+        "say": "Incremental means each run handles only new or changed rows, not the whole table."},
+       {"id": "1.3",
+        "when": "asks what a model is in dbt",
+        "say": "A dbt model is one SQL query saved as a file. dbt builds a table or a view from it."}
+     ]},
+
+    {"id": 2,
+     "ask": "What is a slowly changing dimension, and how would you keep its history?",
+     "sheet": [
+       {"id": "2.1",
+        "when": "asks what a dimension is, or what dimension means here",
+        "say": "A dimension is a table that describes things in a data warehouse, such as customers or products."},
+       {"id": "2.2",
+        "when": "asks whether a particular type is meant, such as type 1 or type 2",
+        "say": "Any type is fine. Say which one you are describing."}
+     ]},
+
+    {"id": 3,
+     "ask": "What is the difference between a star schema and a snowflake schema?",
+     "sheet": [
+       {"id": "3.1",
+        "when": "asks what schema means here",
+        "say": "Here a schema is the way the tables in a data warehouse are laid out and joined."},
+       {"id": "3.2",
+        "when": "asks whether to define, compare or give examples",
+        "say": "Say how the two differ, and when you would choose each."}
+     ]},
+
+    {"id": 4,
+     "ask": "Events sometimes arrive twice from a stream. How would you remove the duplicates?",
+     "sheet": [
+       {"id": "4.1",
+        "when": "asks whether a duplicate event is an exact copy of the original",
+        "say": "Yes. Assume a duplicate is an exact copy of the original event."},
+       {"id": "4.2",
+        "when": "asks whether this is during streaming or after the data is loaded",
+        "say": "Either is fine. Say which one you are describing."},
+       {"id": "4.3",
+        "when": "asks which system, warehouse or streaming tool is used",
+        "say": "No particular system. Use one you know."}
+     ]},
+
+    {"id": 5,
+     "ask": "A daily pipeline failed overnight. What do you check first, and why?",
+     "sheet": [
+       {"id": "5.1",
+        "when": "asks what the pipeline does, or which tool runs it",
+        "say": "Assume a daily batch job that loads files into a warehouse, run by a scheduler such as Airflow."},
+       {"id": "5.2",
+        "when": "asks what logs, alerts or monitoring are available",
+        "say": "Assume you have the scheduler's logs and nothing else."},
+       {"id": "5.3",
+        "when": "asks whether to fix the problem or only find the cause",
+        "say": "Say what you would look at first and why. A full fix is not needed."}
+     ]}
+  ]
+}

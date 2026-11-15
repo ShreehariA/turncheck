@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="830" height="640" viewBox="0 0 830 640" font-family="Helvetica, Arial, sans-serif" fill="#000">
+<rect width="830" height="640" fill="#fff"/>
+<polyline points="415,46 415.0,62.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M415,70 L411.0,61.0 L419.0,61.0 Z"/>
+<polyline points="415,120 415.0,136.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M415,144 L411.0,135.0 L419.0,135.0 Z"/>
+<polyline points="525,95 700,95 700.0,142.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M700,150 L696.0,141.0 L704.0,141.0 Z"/>
+<polyline points="530,187 592.0,187.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M600,187 L591.0,183.0 L591.0,191.0 Z"/>
+<polyline points="415,230 415.0,250.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M415,258 L411.0,249.0 L419.0,249.0 Z"/>
+<polyline points="700,224 700,293 488.0,293.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M480,293 L489.0,297.0 L489.0,289.0 Z"/>
+<polyline points="230,293 342.0,293.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M350,293 L341.0,289.0 L341.0,297.0 Z"/>
+<polyline points="415,328 415,354 130,354 130.0,372.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M130,380 L126.0,371.0 L134.0,371.0 Z"/>
+<polyline points="415,328 415.0,372.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M415,380 L411.0,371.0 L419.0,371.0 Z"/>
+<polyline points="415,328 415,354 700,354 700.0,372.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M700,380 L696.0,371.0 L704.0,371.0 Z"/>
+<polyline points="130,446 130.0,478.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M130,486 L126.0,477.0 L134.0,477.0 Z"/>
+<polyline points="350,446 350.0,478.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M350,486 L346.0,477.0 L354.0,477.0 Z"/>
+<polyline points="480,446 480.0,478.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M480,486 L476.0,477.0 L484.0,477.0 Z"/>
+<polyline points="700,446 700.0,478.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M700,486 L696.0,477.0 L704.0,477.0 Z"/>
+<polyline points="30,413 14,413 14,578 415,578 415.0,588.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M415,596 L411.0,587.0 L419.0,587.0 Z"/>
+<polyline points="130,560 130,578 415,578 415.0,588.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M415,596 L411.0,587.0 L419.0,587.0 Z"/>
+<polyline points="327,560 327,578 415,578 415.0,588.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M415,596 L411.0,587.0 L419.0,587.0 Z"/>
+<polyline points="502,560 502,578 415,578 415.0,588.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M415,596 L411.0,587.0 L419.0,587.0 Z"/>
+<polyline points="700,560 700,578 415,578 415.0,588.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M415,596 L411.0,587.0 L419.0,587.0 Z"/>
+<rect x="335" y="8" width="160" height="38" rx="19.0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="415.0" y="31.9" font-size="15" text-anchor="middle" font-weight="bold">Candidate&#x27;s turn</text>
+<rect x="305" y="70" width="220" height="50" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="415.0" y="91.8" font-size="15" text-anchor="middle" font-weight="bold">Read it twice</text>
+<text x="415.0" y="108.6" font-size="13" text-anchor="middle">model label + wording rules</text>
+<polygon points="415.0,144 530,187.0 415.0,230 300,187.0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="415.0" y="183.8" font-size="15" text-anchor="middle" font-weight="bold">Do the two</text>
+<text x="415.0" y="200.6" font-size="13" text-anchor="middle">readings agree?</text>
+<rect x="600" y="150" width="200" height="74" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="700.0" y="168.1" font-size="15" text-anchor="middle" font-weight="bold">Ask the candidate</text>
+<text x="700.0" y="185.0" font-size="13" text-anchor="middle">answer, question</text>
+<text x="700.0" y="201.2" font-size="13" text-anchor="middle">or still thinking?</text>
+<text x="700.0" y="216.5" font-size="12" text-anchor="middle" font-style="italic">assist: the candidate decides</text>
+<rect x="30" y="258" width="200" height="70" rx="35.0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="130.0" y="281.6" font-size="15" text-anchor="middle" font-weight="bold">One-tap correction</text>
+<text x="130.0" y="298.5" font-size="13" text-anchor="middle">of the last reading,</text>
+<text x="130.0" y="314.7" font-size="13" text-anchor="middle">until the next turn</text>
+<polygon points="415.0,258 480,293.0 415.0,328 350,293.0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="415.0" y="297.9" font-size="15" text-anchor="middle" font-weight="bold">Read as?</text>
+<rect x="30" y="380" width="200" height="66" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="130.0" y="402.2" font-size="15" text-anchor="middle" font-weight="bold">Wait</text>
+<text x="130.0" y="419.1" font-size="13" text-anchor="middle">say nothing, keep the words</text>
+<text x="130.0" y="434.4" font-size="12" text-anchor="middle" font-style="italic">no action, and it is shown</text>
+<rect x="315" y="380" width="200" height="66" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="415.0" y="401.6" font-size="15" text-anchor="middle" font-weight="bold">Pick a sheet entry</text>
+<text x="415.0" y="418.5" font-size="13" text-anchor="middle">model names an id,</text>
+<text x="415.0" y="434.7" font-size="13" text-anchor="middle">code checks the sheet</text>
+<rect x="600" y="380" width="200" height="66" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="700.0" y="402.2" font-size="15" text-anchor="middle" font-weight="bold">Record the answer</text>
+<text x="700.0" y="419.1" font-size="13" text-anchor="middle">undo until the next turn</text>
+<text x="700.0" y="434.4" font-size="12" text-anchor="middle" font-style="italic">execute and report</text>
+<rect x="30" y="486" width="200" height="74" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="130.0" y="504.1" font-size="15" text-anchor="middle" font-weight="bold">Ask what next</text>
+<text x="130.0" y="521.0" font-size="13" text-anchor="middle">keep thinking, repeat</text>
+<text x="130.0" y="537.2" font-size="13" text-anchor="middle">or move on?</text>
+<text x="130.0" y="552.5" font-size="12" text-anchor="middle" font-style="italic">assist: the candidate decides</text>
+<rect x="250" y="486" width="155" height="74" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="327.5" y="512.2" font-size="15" text-anchor="middle" font-weight="bold">Say the entry</text>
+<text x="327.5" y="529.1" font-size="13" text-anchor="middle">fixed text, logged</text>
+<text x="327.5" y="544.4" font-size="12" text-anchor="middle" font-style="italic">execute and report</text>
+<rect x="425" y="486" width="155" height="74" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="502.5" y="512.2" font-size="15" text-anchor="middle" font-weight="bold">Decline, say why</text>
+<text x="502.5" y="529.1" font-size="13" text-anchor="middle">no hint is given</text>
+<text x="502.5" y="544.4" font-size="12" text-anchor="middle" font-style="italic">execute and report</text>
+<rect x="600" y="486" width="200" height="74" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="700.0" y="504.1" font-size="15" text-anchor="middle" font-weight="bold">Next question</text>
+<text x="700.0" y="521.0" font-size="13" text-anchor="middle">or, after the last one,</text>
+<text x="700.0" y="537.2" font-size="13" text-anchor="middle">the record for a person</text>
+<text x="700.0" y="552.5" font-size="12" text-anchor="middle" font-style="italic">advise: the person scores</text>
+<rect x="320" y="596" width="190" height="38" rx="19.0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="415.0" y="619.9" font-size="15" text-anchor="middle" font-weight="bold">Wait for the next turn</text>
+<text x="615.0" y="88.4" font-size="12" text-anchor="middle">no usable label</text>
+<text x="565.0" y="180.4" font-size="12" text-anchor="middle">no</text>
+<text x="422" y="247.4" font-size="12" text-anchor="start">yes</text>
+<text x="595.0" y="285.4" font-size="12" text-anchor="middle">as the candidate says</text>
+<text x="290.0" y="285.4" font-size="12" text-anchor="middle">as corrected</text>
+<text x="140" y="346.4" font-size="12" text-anchor="start">still thinking</text>
+<text x="422" y="370.4" font-size="12" text-anchor="start">question</text>
+<text x="695" y="346.4" font-size="12" text-anchor="end">answer</text>
+<text x="138" y="469.4" font-size="12" text-anchor="start">second in a row</text>
+<text x="344" y="469.4" font-size="12" text-anchor="end">found</text>
+<text x="488" y="469.4" font-size="12" text-anchor="start">none fits</text>
+<text x="540" y="611.4" font-size="12" text-anchor="start" font-style="italic">Italics: the interaction contract for</text>
+<text x="540" y="626.4" font-size="12" text-anchor="start" font-style="italic">that action. Scoring is never automated.</text>
+</svg>

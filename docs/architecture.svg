@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="535" viewBox="0 0 860 535" font-family="Helvetica, Arial, sans-serif" fill="#000">
+<rect width="860" height="535" fill="#fff"/>
+<polyline points="95,72 95.0,162.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M95,170 L91.0,161.0 L99.0,161.0 Z"/>
+<polyline points="135,170 135.0,80.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M135,72 L139.0,81.0 L131.0,81.0 Z"/>
+<polyline points="190,200 292.0,200.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M300,200 L291.0,196.0 L291.0,204.0 Z"/>
+<polyline points="300,245 198.0,245.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M190,245 L199.0,249.0 L199.0,241.0 Z"/>
+<polyline points="372,92 372.0,162.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M372,170 L368.0,161.0 L376.0,161.0 Z"/>
+<polyline points="527,86 527.0,162.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M527,170 L523.0,161.0 L531.0,161.0 Z"/>
+<polyline points="372.0,278.0 372.0,342.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M372,350 L368.0,341.0 L376.0,341.0 Z"/><path d="M372,270 L376.0,279.0 L368.0,279.0 Z"/>
+<polyline points="527.0,278.0 527.0,342.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M527,350 L523.0,341.0 L531.0,341.0 Z"/><path d="M527,270 L531.0,279.0 L523.0,279.0 Z"/>
+<polyline points="600,205 682.0,205.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M690,205 L681.0,201.0 L681.0,209.0 Z"/>
+<polyline points="600,250 645,250 645,393 682.0,393.0" fill="none" stroke="#000" stroke-width="1.5"/><path d="M690,393 L681.0,389.0 L681.0,397.0 Z"/>
+<polyline points="765,160 765.0,84.0" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="1 4" stroke-linecap="round"/><path d="M765,76 L769.0,85.0 L761.0,85.0 Z"/>
+<polyline points="115,270 115,350" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="6 4"/>
+<polyline points="115,436 115,462" fill="none" stroke="#000" stroke-width="1.5" stroke-dasharray="1 4" stroke-linecap="round"/>
+<rect x="55" y="24" width="120" height="48" rx="24.0" fill="#f2f2f2" stroke="#000" stroke-width="1.5"/>
+<text x="115.0" y="52.9" font-size="15" text-anchor="middle" font-weight="bold">Candidate</text>
+<path d="M300,15 A72.5,9 0 0 1 445,15 L445,83 A72.5,9 0 0 1 300,83 Z" fill="#fff" stroke="#000" stroke-width="1.5"/><path d="M300,15 A72.5,9 0 0 0 445,15" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="372.5" y="46.6" font-size="15" text-anchor="middle" font-weight="bold">Interview script</text>
+<text x="372.5" y="63.5" font-size="13" text-anchor="middle">5 questions, sheets,</text>
+<text x="372.5" y="79.7" font-size="13" text-anchor="middle">fixed wording</text>
+<rect x="455" y="12" width="145" height="74" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="527.5" y="37.6" font-size="15" text-anchor="middle" font-weight="bold">Replay harness</text>
+<text x="527.5" y="54.5" font-size="13" text-anchor="middle">scripted turns,</text>
+<text x="527.5" y="70.7" font-size="13" text-anchor="middle">saved interviews</text>
+<rect x="695" y="18" width="140" height="58" rx="29.0" fill="#f2f2f2" stroke="#000" stroke-width="1.5"/>
+<text x="765.0" y="43.8" font-size="15" text-anchor="middle" font-weight="bold">Human assessor</text>
+<text x="765.0" y="60.6" font-size="13" text-anchor="middle">does the scoring</text>
+<rect x="40" y="170" width="150" height="100" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="115.0" y="208.6" font-size="15" text-anchor="middle" font-weight="bold">Screen</text>
+<text x="115.0" y="225.5" font-size="13" text-anchor="middle">question, readings,</text>
+<text x="115.0" y="241.7" font-size="13" text-anchor="middle">buttons, state</text>
+<rect x="300" y="170" width="300" height="100" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="450.0" y="208.6" font-size="15" text-anchor="middle" font-weight="bold">Controller</text>
+<text x="450.0" y="225.5" font-size="13" text-anchor="middle">fixed workflow: act, ask or wait</text>
+<text x="450.0" y="241.7" font-size="13" text-anchor="middle">checks every model reply</text>
+<path d="M690,169 A75.0,9 0 0 1 840,169 L840,271 A75.0,9 0 0 1 690,271 Z" fill="#fff" stroke="#000" stroke-width="1.5"/><path d="M690,169 A75.0,9 0 0 0 840,169" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="765.0" y="209.5" font-size="15" text-anchor="middle" font-weight="bold">Interview record</text>
+<text x="765.0" y="226.3" font-size="13" text-anchor="middle">answers, replies,</text>
+<text x="765.0" y="242.6" font-size="13" text-anchor="middle">asks, corrections,</text>
+<text x="765.0" y="258.9" font-size="13" text-anchor="middle">no score</text>
+<rect x="300" y="350" width="145" height="86" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="372.5" y="381.6" font-size="15" text-anchor="middle" font-weight="bold">Model reading</text>
+<text x="372.5" y="398.5" font-size="13" text-anchor="middle">qwen2.5 7B, local:</text>
+<text x="372.5" y="414.7" font-size="13" text-anchor="middle">label or entry id</text>
+<rect x="455" y="350" width="145" height="86" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="527.5" y="381.6" font-size="15" text-anchor="middle" font-weight="bold">Wording reading</text>
+<text x="527.5" y="398.5" font-size="13" text-anchor="middle">rules: phrased</text>
+<text x="527.5" y="414.7" font-size="13" text-anchor="middle">as a question?</text>
+<path d="M690,351 A75.0,9 0 0 1 840,351 L840,435 A75.0,9 0 0 1 690,435 Z" fill="#fff" stroke="#000" stroke-width="1.5"/><path d="M690,351 A75.0,9 0 0 0 840,351" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="765.0" y="390.6" font-size="15" text-anchor="middle" font-weight="bold">Trace</text>
+<text x="765.0" y="407.5" font-size="13" text-anchor="middle">sent, reply,</text>
+<text x="765.0" y="423.7" font-size="13" text-anchor="middle">edge taken</text>
+<rect x="40" y="350" width="150" height="86" rx="0" fill="#fff" stroke="#000" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="115.0" y="381.6" font-size="15" text-anchor="middle" font-weight="bold">Speech input</text>
+<text x="115.0" y="398.5" font-size="13" text-anchor="middle">simulated: typed,</text>
+<text x="115.0" y="414.7" font-size="13" text-anchor="middle">no question marks</text>
+<rect x="40" y="462" width="150" height="66" rx="0" fill="#fff" stroke="#000" stroke-width="1.5" stroke-dasharray="1 4" stroke-linecap="round"/>
+<text x="115.0" y="491.8" font-size="15" text-anchor="middle" font-weight="bold">Real speech</text>
+<text x="115.0" y="508.6" font-size="13" text-anchor="middle">recognition, voice</text>
+<rect x="262" y="488" width="112" height="28" rx="0" fill="#fff" stroke="#000" stroke-width="1.5"/>
+<text x="318.0" y="506.9" font-size="15" text-anchor="middle" font-weight="bold">implemented</text>
+<rect x="384" y="488" width="100" height="28" rx="0" fill="#fff" stroke="#000" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="434.0" y="506.9" font-size="15" text-anchor="middle" font-weight="bold">simulated</text>
+<rect x="494" y="488" width="100" height="28" rx="0" fill="#fff" stroke="#000" stroke-width="1.5" stroke-dasharray="1 4" stroke-linecap="round"/>
+<text x="544.0" y="506.9" font-size="15" text-anchor="middle" font-weight="bold">planned</text>
+<rect x="604" y="488" width="100" height="28" rx="14.0" fill="#f2f2f2" stroke="#000" stroke-width="1.5"/>
+<text x="654.0" y="506.9" font-size="15" text-anchor="middle" font-weight="bold">person</text>
+<path d="M714,489 A63.0,9 0 0 1 840,489 L840,515 A63.0,9 0 0 1 714,515 Z" fill="#fff" stroke="#000" stroke-width="1.5"/><path d="M714,489 A63.0,9 0 0 0 840,489" fill="none" stroke="#000" stroke-width="1.5"/>
+<text x="777.0" y="515.9" font-size="15" text-anchor="middle" font-weight="bold">stored data</text>
+<text x="88" y="117.4" font-size="12" text-anchor="end">turns,</text>
+<text x="88" y="132.4" font-size="12" text-anchor="end">taps</text>
+<text x="143" y="109.9" font-size="12" text-anchor="start">question,</text>
+<text x="143" y="124.9" font-size="12" text-anchor="start">readings,</text>
+<text x="143" y="139.9" font-size="12" text-anchor="start">replies</text>
+<text x="245.0" y="176.4" font-size="12" text-anchor="middle">turn, choice,</text>
+<text x="245.0" y="191.4" font-size="12" text-anchor="middle">correction</text>
+<text x="245.0" y="261.9" font-size="12" text-anchor="middle">what to show</text>
+<text x="366" y="127.4" font-size="12" text-anchor="end">read at</text>
+<text x="366" y="142.4" font-size="12" text-anchor="end">the start</text>
+<text x="535" y="124.4" font-size="12" text-anchor="start">same actions</text>
+<text x="535" y="139.4" font-size="12" text-anchor="start">as the screen</text>
+<text x="380" y="299.9" font-size="12" text-anchor="start">turn in;</text>
+<text x="380" y="314.9" font-size="12" text-anchor="start">label or</text>
+<text x="380" y="329.9" font-size="12" text-anchor="start">entry id out</text>
+<text x="535" y="299.9" font-size="12" text-anchor="start">turn in;</text>
+<text x="535" y="314.9" font-size="12" text-anchor="start">question</text>
+<text x="535" y="329.9" font-size="12" text-anchor="start">or not out</text>
+<text x="645.0" y="197.4" font-size="12" text-anchor="middle">what happened</text>
+<text x="645.0" y="411.4" font-size="12" text-anchor="middle">every call</text>
+<text x="645.0" y="426.4" font-size="12" text-anchor="middle">and edge</text>
+<text x="773" y="111.4" font-size="12" text-anchor="start">assessor view</text>
+<text x="773" y="126.4" font-size="12" text-anchor="start">planned</text>
+</svg>

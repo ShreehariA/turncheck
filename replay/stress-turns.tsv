@@ -1,16 +1,7 @@
-# Stress turns: 30 turns written to break the rule, after it was frozen (git tag frozen-v1).
-#
-# Written by the AI assistant that also built the rule, so they are not independent evidence
-# and not a sample of real candidates. They are the hard cases it could think of:
-#   A  questions that are not phrased as questions
-#   B  answers that sound like questions
-#   C  thinking aloud that sounds like a question or an answer
-#   D  turns that are an answer and a check at once (marked unsure: TurnCheck should ask)
-# Run once, with no change to the prompts, the wording check, the graph or the sheets:
-#     python3 replay/replay.py turns replay/stress-turns.tsv
-# The counts say where TurnCheck breaks, not how often it would with real candidates.
-#
-# One turn per line:    question number | what was meant | the turn | the sheet entry a question should get
+# 30 turns written by Claude Code after the rule was frozen (tag frozen-v1), each meant to break it.
+# Not independent and not real candidates: they show where TurnCheck breaks, not how often.
+# Run once, with nothing changed afterwards: results/2026-11-15-stress-turns.txt
+# question number | what was meant | the turn | the sheet entry a question should get
 
 # A  questions that are not phrased as questions
 4 | question | I'm assuming the duplicates are exact copies | 4.1
@@ -42,7 +33,7 @@
 2 | thinking | so you'd take the old row and, no wait
 1 | thinking | is it incremental, is it, um
 
-# D  an answer and a check at once
+# D  an answer and a check at once (marked unsure: TurnCheck should ask)
 2 | unsure | type 2, right
 4 | unsure | keep the latest one per event id, or is that not what you mean
 1 | unsure | I'd filter on the updated timestamp, does that make sense

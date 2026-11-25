@@ -6,7 +6,7 @@ TurnCheck is a prototype interviewer that works out what each turn was before it
 
 Coursework for Intelligent Interactive Systems, University of Birmingham. The version submitted for Assignment 2 is the tag [`a2-submission`](https://github.com/ShreehariA/turncheck/tree/a2-submission). Since then the code and results are unchanged; the README and some file headers were shortened and a few files removed.
 
-*README prose: about 1,030 words, not counting code, commands and commit ids.*
+*README prose: about 1,080 words, not counting code, commands and commit ids.*
 
 <p>
   <img src="docs/screenshots/1b-question.png" width="230" alt="A question about dbt is read as a question, answered from the sheet and not recorded">
@@ -46,6 +46,7 @@ Without Ollama the screen still runs and asks how to read every turn. With `app.
 
 - **23 Oct** ([a606088](https://github.com/ShreehariA/turncheck/commit/a6060888ffe15e9e1d4f78685c9875a0cc8abc59)): a spike. The model labelled 11 of 11 clear turns right but was 0.97 or more sure even on ambiguous ones, so a second reading was added, and TurnCheck asks when the two disagree (`spike/results-2026-10-23.txt`).
 - **14 Nov** ([a777892](https://github.com/ShreehariA/turncheck/commit/a7778922bedc8aa0dd101b510f9debf4bc210e18), [5483d42](https://github.com/ShreehariA/turncheck/commit/5483d4270000c75f2ac9ae3bfe0192a0d968f8a3)): the controller as a fixed workflow with a test per edge, and the screen.
+- **14 Nov** ([916b2ba](https://github.com/ShreehariA/turncheck/commit/916b2ba9504b42aad5b37f9b839454d03c60cc9b)): both diagrams in draw.io, in my usual style (black and white, no crossing lines), at my request.
 - **14 Nov** ([ccb888d](https://github.com/ShreehariA/turncheck/commit/ccb888d784848eabf04b7968ea3fd34e1c828c2b)): the first replay left 4 of 19 questions in silence as thinking aloud, so "still thinking" became correctable, and thinking aloud worded as a question now asks (`results/2026-11-14-dev-turns.txt`, then `-run2.txt`).
 - **14 Nov** ([d3e4f8d](https://github.com/ShreehariA/turncheck/commit/d3e4f8d859e09e3a1c844f194634c32d9d233a97)): a hint leaked through a sheet entry that described the answer. Two prompt changes made it worse; rewording the entry fixed it (`results/2026-11-14-entry-picker-notes.txt`).
 - **15 Nov** ([d1cd4d5](https://github.com/ShreehariA/turncheck/commit/d1cd4d5f7af44b74e6a9ec01a38a2936aea376bd)): three sheet replies reworded; the dev turns gave the same 42 outcomes.
@@ -58,8 +59,9 @@ Without Ollama the screen still runs and asks how to read every turn. With `app.
 
 I used Claude Code in the terminal. Claude Fable 5.2 did the build and finishing work on 14 and 15 November; Claude Opus 5.5 did the October draft, a check of the public repository on 15 November, and this cleanup on 25 November.
 
-- **What I did:** chose the problem, from the interview above; set the limits (a local model, no paid service or key, and an AI that never scores); approved the design before it was built, accepting its proposals of two readings, "ask when they disagree", a fixed sheet and the standard library only; asked for the diagrams in draw.io in my black-and-white style; and made the first nine commits and the 25 November one.
+- **What I did:** chose the problem, from the interview above; set the limits (a local model, no paid service or key, and an AI that never scores); approved the design before it was built, accepting its proposals of two readings, "ask when they disagree", a fixed sheet and the standard library only; asked for the diagrams in draw.io in my black-and-white style; on 25 November, judged this README too long and too AI-sounding and had it cut; and made the first nine commits and those from 25 November on.
 - **What the AI did:** almost all of the building and writing: the spike, controller, screen, replay harness and tests; every test turn; the interview questions and sheets; the diagrams and screenshots; this README; the report's text and figures; and commits 10 to 16.
+- **Reused:** Ollama and the Qwen2.5 7B model, used as they are. Nothing else is taken from elsewhere.
 - **How it was checked:** the AI ran every check recorded here, at my request: a test per edge, the replays in `results/`, a run from a fresh clone, and the report's claims against the lecture slides and papers. No test turn was written by a person.
 
 The agent's rules are in `AGENTS.md`.
